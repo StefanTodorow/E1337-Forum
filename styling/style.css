@@ -29,6 +29,7 @@
 #content {
     background-color: rgb(100, 58, 7);
     grid-area: content;
+    border: 3px solid black;
 }
 
 #content-container {
@@ -50,12 +51,25 @@
 .date {
     width: 100%;
     text-align: right;
-    margin-right: 40px;
+    margin-right: 10px;
     margin-top: 0px;
 }
 
+.topic {
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
 .text {
-    
+    background-color: rgb(93, 66, 24);
+    padding: 20px;
+    border-left: 3px solid black;
+    border-bottom-left-radius: 15px;
+    border-right: 3px solid black;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
 }
 
 #footer {
@@ -64,9 +78,9 @@
 }
 
 hr {
-    width: 95%;
+    width: 100%;
     border: none;
-    height: 5px;
+    height: 3px;
     background-color: black;
     margin: 20px auto 20px;
 }
