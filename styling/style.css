@@ -2,13 +2,46 @@
     width: auto;
     height: 100vh;
     display: grid;
-    grid-template-columns: 150px 1fr 1fr;
-    grid-template-rows: 10vh 10vh auto 10vh;
+    grid-template-columns: 150px 1fr 1fr 150px;
+    grid-template-rows: 10vh 10vh auto auto 10vh;
     grid-template-areas: 
-    "header header header"
-    "nav-bar nav-bar nav-bar"
-    "advert content content"
-    "footer footer footer";
+    "header header header header"
+    "nav-bar nav-bar nav-bar nav-bar"
+    "advert-left content content advert-right"
+    "advert-left content content advert-right"
+    "footer footer footer footer";
+}
+
+@media (max-width: 820px) {
+    #page-container {
+        grid-template-columns: 150px 1fr 1fr 100px;
+        grid-template-areas: 
+    "header header header header"
+    "nav-bar nav-bar nav-bar nav-bar"
+    "content content content advert-right"
+    "content content content advert-left"
+    "footer footer footer footer";
+    }
+    .person-info {
+        flex-direction: column;
+    }
+    .date {
+        text-align: left !important;
+        margin-top: 10px !important;
+    }
+    .username-display {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 380px) {
+    .text {
+        font-size: 13px;
+    }
+    .topic {
+        font-size: 15px !important;
+    }
 }
 
 #header {
@@ -21,9 +54,14 @@
     grid-area: nav-bar;
 }
 
-#advert {
+#left-advert {
     background-color: blueviolet;
-    grid-area: advert;
+    grid-area: advert-left;
+}
+
+#rightadvert {
+    background-color: rgb(138, 11, 11);
+    grid-area: advert-right;
 }
 
 #content {
@@ -59,6 +97,7 @@
     border-bottom: 1px solid black;
     margin-bottom: 15px;
     font-size: 25px;
+    font-weight: 550;
 }
 
 .text {
